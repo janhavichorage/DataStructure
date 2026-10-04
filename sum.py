@@ -1,4 +1,3 @@
-
 n=int(input("Enter  elements number:"))
 
 arr=[]
