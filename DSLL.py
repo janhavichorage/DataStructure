@@ -27,7 +27,24 @@ class Linkedlist:
             print("Invalid position")
             return
 
+    def delete(self,value):
         temp = self.head
+        if temp.data== value:
+            self.head=self.head.next
+            self.head.prev=None
+        else:
+            while(temp.data!=value and temp):
+                temp=temp.next
+                if temp== None :
+                    print("value is not present in the list")
+                    return
+
+                temp.prev .next=temp.next
+                if temp.next:
+                    temp.next.prev=temp.prev
+                temp.None
+               
+
 
         if pos == 1:
             new_node.next = self.head
@@ -85,6 +102,15 @@ class Linkedlist:
         print()
 
 
+    def count_occ(self,num):
+        temp=self.head
+        cnt=0
+        while temp:
+            cnt +=1
+        temp=temp.next
+        print("The occurance:",cnt)
+    def
+
 list1 = Linkedlist()
 
 list1.append(Node(12))
@@ -97,3 +123,4 @@ list1.insert(Node(99), 3)
 
 list1.print()
 list1.print_reverse()
+
