@@ -60,7 +60,15 @@ def count_nonleaf(temp):
     else:
         return 1 + count_nonleaf(temp.left) + count_nonleaf(temp.right)
 
-
+def find_minmax(self,rt):
+    temp=rt
+    while temp.temp.left:
+        temp=temp.left
+    print("\nmin value:",temp.data)
+    temp=rt
+    while temp.right:
+        temp=temp.right
+    print("\nMax value:",temp.data)
 btree = BST()
 
 btree.insert(Node(10))
@@ -69,6 +77,7 @@ btree.insert(Node(2))
 btree.insert(Node(25))
 btree.insert(Node(13))
 btree.insert(Node(40))
+btree.find_minmax()
 
 print("Total Nodes:", count_nodes(btree.root))
 print("Leaf Nodes:", count_leaf(btree.root))
